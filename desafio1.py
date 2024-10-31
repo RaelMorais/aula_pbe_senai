@@ -2,7 +2,7 @@ class Inventario:
     def __init__(self):
         self.a = ""
     def mostrar_quantidade(self):
-        equipamentos = {
+        self.equipamentos = {
             'Computadores': 10,
             'Teclados': 10,
             'Mouse': 10,

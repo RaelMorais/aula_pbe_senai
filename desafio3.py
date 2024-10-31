@@ -32,25 +32,19 @@ class Livraria:
             print(f"Livro '{titulo}' não encontrado na livraria.")
 
     def menu(self):
-        while True:
-            print("\nMenu da Livraria:")
-            print("1. Visualizar livros")
-            print("2. Empréstimo de livro")
-            print("3. Devolução de livro")
-            print("4. Sair")
-
-            escolha = input("Escolha uma opção (1-4): ")
-
-            if escolha == '1':
+        
+        escolha = input("Escolha abaixo \n1- Visualizar \n2- Emprestimo \n3- Devolução \n4- Sair ")
+        match escolha:
+            case "1":
                 self.visualizar_livros()
-            elif escolha == '2':
+            case "2":
                 titulo = input("Digite o título do livro que deseja emprestar: ")
                 self.emprestar_livro(titulo)
-            elif escolha == '3':
+            case "3":
                 titulo = input("Digite o título do livro que deseja devolver: ")
                 self.devolver_livro(titulo)
-            elif escolha == '4':
+            case "4":
                 print("Saindo do sistema. Até logo!")
-                break
-            else:
-                print("Opção inválida. Tente novamente.")
+                exit()
+            case _:
+                print("Opção inválida.")
